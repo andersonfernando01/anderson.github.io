@@ -130,6 +130,18 @@ console.log(bntLateral);
     }
   }) 
 
+
+
+
+  /***reescrevendo */
+  var typed = new Typed(".typing",{
+    strings:["FullStack Development"],
+    typeSpeed:150,
+    backSpeed:150,
+    loop:true
+
+  })
+
    
 
    

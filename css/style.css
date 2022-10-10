@@ -209,6 +209,10 @@ body{
 #banner h2 {
   color: #222;
 }
+
+#banner h4 span{
+  color: #222;
+}
 #about {
   padding: 100px 0px;
 }
@@ -467,7 +471,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background: url('/images/background.jpg');
+    background: url('../images/background.jpg');
     background-size: cover;
     background-position: right 0 top 5%;
 }
@@ -596,6 +600,26 @@ flex-basis: 100%;
 
 @media (max-width:477px) {
 
+  #banner {
+    height: 70vh;
+    padding: 0 20px;
+  
+}
+
+#banner h1 {
+  margin-bottom: 20px;
+  color: var(--styleColor);
+  font-size: 35px;
+}
+#banner h2 {
+  color: #222;
+  font-size: 20px;
+}
+#banner h4 {
+    color: #222;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
   #services .services-list .fa-services {
     width: 200px;
 
@@ -604,6 +628,12 @@ flex-basis: 100%;
   #portifolio .work-list .work img {
     width: 200px;
 }
+
+.nav-bar .content-item .item {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
 }
 
 
