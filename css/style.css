@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
 }
+i{
+  margin-left: 0;
+}
 
 h1 {
   font-size: 50px;
@@ -92,6 +95,7 @@ body{
 
 #header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 40px 50px;
   background-color: var(--mainColor);
@@ -102,6 +106,7 @@ body{
   z-index: 999;
   box-shadow: 0 5px 15px rgba(0,0 ,0,0.08);
 }
+
 
 #header .nav-bar .content-item {
   display: flex;
@@ -210,7 +215,7 @@ body{
   color: #222;
 }
 
-#banner h4 span{
+#banner h4 {
   color: #222;
 }
 #about {
@@ -235,15 +240,52 @@ body{
 
 #about .container-about .content-text {
   flex-basis: 60%;
+  
+}
+
+#about .container-about .content-text nav .item{
+  justify-content: space-between;
 }
 
 #about .container-about .content-text .resultados {
   display: none;
+  position: relative;
+  margin-top: 20px;
 }
 
-#about .container-about .content-text.open .resultados {
+#about .container-about .content-text .resultados .linha::before{
+position: absolute;
+  width: 2px;
+  height: 100%;
+  content: "";
+  background-color: var(--styleColor);
+}
+
+#about .container-about .content-text .resultados.open {
   display: block;
 }
+
+#about .container-about .content-text .resultados.open .linha .conteudo{
+
+  margin: 0 16px;
+}
+
+#about .container-about .content-text .resultados.open .linha .circulo{
+position: relative;
+width: 20px;
+height: 20px;
+left: -8px;
+border-radius: 50%;
+content: "";
+background-color: var(--styleColor);
+}
+.circulo h3, i{
+  
+  color: var(--styleColor);
+  margin-left: 26px;
+
+}
+
 
 #services {
   padding: 100px 0px;
@@ -317,14 +359,19 @@ body{
      justify-content: space-between;
      flex-wrap: wrap;
      margin-top: 50px;
+
+     transition: all 0.3s ease;
 }
 
 #portifolio .work-list .work {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
+
+
+
 
 #portifolio .work-list .work img {
   border-radius: 10px;
@@ -646,7 +693,7 @@ flex-basis: 100%;
 .style-background{
   position:fixed;
   left: 0;
-  top: 120px;
+  top: 16px;
   padding: 15px;
 }
 

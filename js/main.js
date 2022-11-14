@@ -32,31 +32,9 @@ function removeShadowAbout() {
 for ( i = 5 ; i < activeItem.length; i++){
     activeItem[i].addEventListener('click',function(){
         removeShadowAbout()
-            this.classList.toggle('shadow-item');
-            conteudo(name)
+            this.classList.toggle('shadow-item');         
     })
 }
-
-
-
-
-function conteudo(name){
-    
-   var teste = document.getElementById(name).id
-
-if(teste === "edu"){
-    
-}else if (teste ==="hab") {
-    console.log("ok");
-   }else if (teste ==="exp") {
-    console.log("ok exp");
-   } 
-    
-   }
-    
-
-
-
 
    /// section hidden porfifolio
 
