@@ -52,11 +52,19 @@ ul li {
   border: 2px solid var(--styleColor);
   transition: .3s;
 }
+.btn-default i{
+  color: var(--textColor);
+}
 
 .btn-default:hover {
   background-color: var(--styleColor);
   color: var(--mainColor);
+
+  
 }
+
+
+
 
 :root {
   --mainColor:#E3E6F3;
@@ -442,6 +450,7 @@ background-color: var(--styleColor);
 
 #contact .row .contact-left .social-media {
   margin: 30px 0;
+  margin-left: -20px;
 }
 
 #contact .row .contact-left .social-media a {
@@ -709,8 +718,12 @@ flex-basis: 100%;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 50%;
+  
+
 }
 
 .style-background .icons i{
   line-height: 40px;
+  margin-left: 2px;
+  
 }
