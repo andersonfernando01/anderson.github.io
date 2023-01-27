@@ -11,10 +11,10 @@ function educacao() {
     ano = document.createElement('p')
     ist.innerText="Instituto Superior Policténico Indepedente (ISPI)"
     curso.innerText="Curso: Engenharia Informática (EI)"
-    ano.innerText="4ªAno"
+    ano.innerText="Fazendo: 4ª Ano."
     linha.classList.add('linha');   
     circulo.classList.add('circulo');
-    
+        
     
 
 
@@ -24,9 +24,9 @@ function educacao() {
     conteudo.appendChild(curso)
     conteudo.appendChild(ano)
     linha.appendChild(conteudo)
-    contentTab.appendChild(linha)
-
+    contentTab.appendChild(linha);
 }
+
 
 function habilidaades() {
     linha1 = document.createElement('div');
@@ -38,9 +38,9 @@ function habilidaades() {
     conteudo = document.createElement('div')
     conteudo.classList.add('conteudo')
     descricao= document.createElement('p')
-    descricao.innerText="Tecnologias Front-End, usadas para desenvolver paginas webs, com conteúdo estruturado, bonito e interativo."
+    descricao.innerText="Tecnologias Front-End, usadas para desenvolver páginas webs, com conteúdo estruturado, estilizado, estático e interativo."
     frameworks= document.createElement('p')
-    frameworks.innerText ="FRAMEWORK'S: BOOTSTRAP and soon REACT.JS";
+    frameworks.innerText ="Uso também BOOTSTRAP e pretendo aprender REACT.JS, sendo o primeiro um frameworks usado para desenvolvimento de componentes de interface e o segundo uma biblioteca Javacript para criação de interfaces de usuário.";
 
     back = document.createElement('div');
     back.classList.add('linha');   
@@ -51,7 +51,7 @@ function habilidaades() {
     conteudo2 = document.createElement('div')
     conteudo2.classList.add('conteudo')
     descricaoBack= document.createElement('p')
-    descricaoBack.innerText="Tecnologias BACK-End,usadas para criar aplicações com suporte a banco de dados ."
+    descricaoBack.innerText="Tecnologias BACK-End,usadas para criar aplicações webs, dinânicas  com suporte a banco de dados ."
    
     
     circulo1.appendChild(tech1);
@@ -81,9 +81,9 @@ function  experiencias() {
     conteudo = document.createElement('div')
     conteudo.classList.add('conteudo')
     descricao= document.createElement('p')
-    descricao.innerText="Tecnologias Front-End, usadas para desenvolver paginas webs, com conteúdo estruturado, bonito e interativo."
-    frameworks= document.createElement('p')
-    frameworks.innerText ="FRAMEWORK'S: BOOTSTRAP and soon REACT.JS";
+    descricao.innerText="Este site foi criado com HTML5,CSS3 E JAVACRIPT com objectivo de divulgar as minhas habilidades, despertar o interesse de recrutadores e criar uma galeria de futuros projectos."
+
+
 
     back = document.createElement('div');
     back.classList.add('linha');   
@@ -94,7 +94,7 @@ function  experiencias() {
     conteudo2 = document.createElement('div')
     conteudo2.classList.add('conteudo')
     descricaoBack= document.createElement('p')
-    descricaoBack.innerText="Tecnologias BACK-End,usadas para criar aplicações com suporte a banco de dados ."
+    descricaoBack.innerText="O 'ISPI23'é uma plataforma criada para conectar estudantes e membros das Associações de estudantes de uma instituição escolar com o objectivo de promover um espiríto cooperativo. Para mais informações consulte a sessão 'Portifólio'."
     circulo2.append(techBack)
     back.appendChild(circulo2)
     conteudo2.appendChild(descricaoBack)
@@ -104,7 +104,6 @@ function  experiencias() {
     circulo1.appendChild(tech1);
     linha1.append(circulo1);
     conteudo.append(descricao)
-    conteudo.append(frameworks)
     linha1.appendChild(conteudo)
     
     contentTab.appendChild(linha1)
@@ -114,19 +113,23 @@ function  experiencias() {
 
 var activeItem = document.getElementsByClassName('item')
 var contentTab = document.querySelector(".resultados");
-for ( i = 5 ; i < activeItem.length; i++){
+
+contentTab.classList.add('open')
+contentTab.innerHTML="";
+    educacao();
+    
+
+for ( i = 4 ; i < activeItem.length; i++){
     activeItem[i].addEventListener('click',function(){
       
     show(this.id);   
-    
             
     })
 }
 
+
 function show(value){
-
-    contentTab.classList.add('open')
-
+    
     if (contentTab.classList.contains('open') && value =="edu") {
         contentTab.innerHTML="";
                educacao();

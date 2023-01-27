@@ -267,10 +267,11 @@ position: absolute;
   height: 100%;
   content: "";
   background-color: var(--styleColor);
+  
 }
 
 #about .container-about .content-text .resultados.open {
-  display: block;
+  display: flex;
 }
 
 #about .container-about .content-text .resultados.open .linha .conteudo{

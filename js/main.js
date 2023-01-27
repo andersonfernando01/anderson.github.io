@@ -1,18 +1,17 @@
  var activeItem = document.getElementsByClassName('item')
 
-
- for ( i = 0 ; i < 5; i++){
+ for ( i = 0 ; i < 4; i++){
    
     activeItem[i].addEventListener('click',function(){
         removeShadow()
             this.classList.toggle('shadow-item');
-
+             
     })
 }
 
 function removeShadow() {
     
- for ( i = 0 ; i < 5; i++){
+ for ( i = 0 ; i < 4; i++){
     
          activeItem[i].classList.remove('shadow-item');
 }
@@ -20,7 +19,7 @@ function removeShadow() {
 
 function removeShadowAbout() {
     
-    for ( i = 5 ; i < activeItem.length; i++){
+    for ( i = 4 ; i < activeItem.length; i++){
        
             activeItem[i].classList.remove('shadow-item');
    }
@@ -29,10 +28,10 @@ function removeShadowAbout() {
 
 // about section
 
-for ( i = 5 ; i < activeItem.length; i++){
+for ( i = 4 ; i < activeItem.length; i++){
     activeItem[i].addEventListener('click',function(){
         removeShadowAbout()
-            this.classList.toggle('shadow-item');         
+            this.classList.toggle('shadow-item');
     })
 }
 
@@ -86,7 +85,7 @@ console.log(bntLateral);
 
 
    if (bntLateralclose) {
-    window.addEventListener('mousemove',function(){
+    window.addEventListener('mouseup',function(){
         navbarlateral.classList.remove('active')
        })
    }
